@@ -14,7 +14,7 @@ function App() {
         <Route path='/' exact>
           <Home />
         </Route>
-        <Route exact path="/exams/:id" render={()=> <Exam />} />
+        <Route exact path="/exams/:id" render={(props)=> <Exam examId={props.match.params.id}/>} />
         <Route exact path="/tests/:id" render={()=> <TestComponent />} />
       </Switch>
       <Footer/>

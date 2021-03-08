@@ -4,6 +4,7 @@ import { BrowserRouter,Switch, Route } from 'react-router-dom'
 import NavBar from './components/Navbar';
 import Exam from './components/Exam';
 import TestComponent from './components/TestComponent'
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/exams/:id" render={()=> <Exam />} />
         <Route exact path="/tests/:id" render={()=> <TestComponent />} />
       </Switch>
+      <Footer/>
     </BrowserRouter>
   );
 }

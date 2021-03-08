@@ -1,30 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {SSCQuestions} from '../data/MockQuestion'
+import QuestionComponent from './QuestionComponent';
 
 const TestComponent = () => {
+    const EACH_QUESTION_MARKS=5;
+    const totalMarks=SSCQuestions.length*EACH_QUESTION_MARKS;
+    const [questions,setQuestions]=useState(SSCQuestions);
+
+    const cardHandler=(quesId,selectedOption)=>{
+        setQuestions(questions.map((ques)=>{
+            if(ques.id===quesId && ques.answered===false){
+                ques.selected=selectedOption;
+                ques.answered=true;
+                return ques;
+            }else
+                return ques;
+        }))
+    }
+    const calculateMarks=()=>{
+        let marks=0;
+        questions.forEach(element => {
+            if(element.answered){
+                if(element.selected===element.correct)
+                    marks+=EACH_QUESTION_MARKS;
+            }
+        });
+        return marks;
+    }
+
     return (
         <div className='container'>
-            <div className='mcq-wrapper'>
-                <p>Who is prime minister of India</p>
-                <div className='options'>
-                    <div className='option wrong'>
-                        <div className='option-number'>A. </div>
-                        <div className='option-val'>Narendra Modi</div>
-                    </div>
-                    <div className='option na'>
-                        <div className='option-number'>B. </div>
-                        <div className='option-val'>ManMohan</div>
-                    </div>
-                    <div className='option correct'>
-                        <div className='option-number'>C. </div>
-                        <div className='option-val'>Rahul Gandhi</div>
-                    </div>
-                    <div className='option'>
-                        <div className='option-number'>D. </div>
-                        <div className='option-val'>Arvind</div>
-                    </div>
-                </div>
+            <h3 className='center-text'>SSC Mock Test</h3>
+            <div className='underline'></div>
+            <div className='score-div'>
+                <p>{calculateMarks()}</p>
+                <p>/{totalMarks}</p>
             </div>
+            {SSCQuestions.map((ques)=>{
+                const {id}=ques;
+                return <QuestionComponent key={id} question={ques} listener={cardHandler}/>
+            })}
         </div>
     )
   }

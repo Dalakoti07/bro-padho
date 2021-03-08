@@ -6,8 +6,8 @@ export const SSCQuestions=[
         "option2":"LNBKF",
         "option3":"LKNBF",
         "option4":"FLKBN",
-        "correct":"1",
-        "selected":null
+        "correct":1,
+        "answered":false
     },
     {
         "id":2,
@@ -16,8 +16,8 @@ export const SSCQuestions=[
         "option2":"LNBKF",
         "option3":"LKNBF",
         "option4":"FLKBN",
-        "correct":"2",
-        "selected":null
+        "correct":2,
+        "answered":false
     },
     {
         "id":3,
@@ -26,8 +26,8 @@ export const SSCQuestions=[
         "option2":"LNBKF",
         "option3":"LKNBF",
         "option4":"FLKBN",
-        "correct":"3",
-        "selected":null
+        "correct":3,
+        "answered":false
     },
     {
         "id":4,
@@ -36,7 +36,7 @@ export const SSCQuestions=[
         "option2":"LNBKF",
         "option3":"LKNBF",
         "option4":"FLKBN",
-        "correct":"4",
-        "selected":null
+        "correct":4,
+        "answered":false
     }
 ]

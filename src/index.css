@@ -151,6 +151,7 @@ code {
 }
 
 .mcq-wrapper{
+  margin-top: 10px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -195,4 +196,21 @@ code {
 .option-val{
   margin-left: 1rem;
   flex-grow: 1;
+}
+.option.disable{
+  /* cursor: not-allowed; */
+}
+
+.score-div{
+  /* border: 1px solid red; */
+  align-items: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+.score-div p{
+  font-family: inherit;
+  display: block;
+  /* border: 1px solid green; */
+  font-size: 2rem;
 }

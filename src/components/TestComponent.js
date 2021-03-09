@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import {SSCQuestions} from '../data/MockQuestion'
+import {questionsSet} from '../data/MockQuestion'
 import QuestionComponent from './QuestionComponent';
 
-const TestComponent = () => {
+const TestComponent = ({examKey}) => {
+    console.log('examKey ',examKey);
     const EACH_QUESTION_MARKS=5;
-    const totalMarks=SSCQuestions.length*EACH_QUESTION_MARKS;
-    const [questions,setQuestions]=useState(SSCQuestions);
+    const totalMarks=questionsSet[examKey].length*EACH_QUESTION_MARKS;
+    const [questions,setQuestions]=useState(questionsSet[examKey]);
 
     const cardHandler=(quesId,selectedOption)=>{
         setQuestions(questions.map((ques)=>{
@@ -36,7 +37,7 @@ const TestComponent = () => {
                 <p>{calculateMarks()}</p>
                 <p>/{totalMarks}</p>
             </div>
-            {SSCQuestions.map((ques)=>{
+            {questionsSet[examKey].map((ques)=>{
                 const {id}=ques;
                 return <QuestionComponent key={id} question={ques} listener={cardHandler}/>
             })}

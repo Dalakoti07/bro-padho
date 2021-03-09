@@ -15,7 +15,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/exams/:id" render={(props)=> <Exam examId={props.match.params.id}/>} />
-        <Route exact path="/tests/:id" render={()=> <TestComponent />} />
+        <Route exact path="/tests/:id" render={(props)=> <TestComponent examKey={props.match.params.id} />} />
       </Switch>
       <Footer/>
     </BrowserRouter>

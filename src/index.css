@@ -329,12 +329,20 @@ code {
   .navbar-wrapper {
     flex-direction: column;
   }
+
+  .syllabus-table tr th:nth-child(1), tr td:nth-child(1){
+    display: none;
+  }
+  .syllabus-table tr th:nth-child(5), tr td:nth-child(5){
+    display: none;
+  }
 }
 
 
 .syllabus-table{
   width: 100%;
   overflow-x: hidden;
+  table-layout:fixed;
 }
 .syllabus-table td, #syllabus-table th {
   border: 1px solid #ddd;

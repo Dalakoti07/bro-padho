@@ -332,3 +332,29 @@ code {
 }
 
 
+.syllabus-table{
+  width: 100%;
+  overflow-x: hidden;
+}
+.syllabus-table td, #syllabus-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.syllabus-table tr:nth-child(even){background-color: #f2f2f2;}
+.syllabus-table tr:hover {background-color: #ddd;}
+.syllabus-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.exam-topic {
+  background: #d4e6a5;
+  padding: 0.25rem 0.5rem;
+  margin: 0.2rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  color: var(--primaryColor);
+}

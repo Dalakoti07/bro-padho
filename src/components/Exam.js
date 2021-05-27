@@ -3,30 +3,30 @@ import {examsList} from '../data/data'
 
 const Exam = ({examId}) => {
   let videosList=[{
-    title:"Jimmy",
-    id:"1",
-    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
-},{
-    title:"Jane",
-    id:"2",
-    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
-},{
-    title:"Jonny",
-    id:"3",
-    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
-},{
-    title:"Ab",
-    id:"4",
-    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
-},{
-    title:"Anany",
-    id:"5",
-    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
-},{
-    title:"Amit",
-    id:"6",
-    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
-}]
+        title:"SSC MTS 2002, Notification Out",
+        id:"1",
+        youtube_link:"https://www.youtube.com/embed/1qFyOCLVzNc"
+    },{
+        title:"SSC HSL Syllabus",
+        id:"2",
+        youtube_link:"https://www.youtube.com/embed/FLIS0o6DLBc"
+    },{
+        title:"SSC HSL Syllabus 2",
+        id:"3",
+        youtube_link:"https://www.youtube.com/embed/YCQq2sVlIpk"
+    },{
+        title:"UPSC Syllabus 2021",
+        id:"4",
+        youtube_link:"https://www.youtube.com/embed/tVQePNlD3F8"
+    },{
+        title:"Book list and syllabus for UPSC",
+        id:"5",
+        youtube_link:"https://www.youtube.com/embed/eqXFqA1Yg_0"
+    },,{
+      title:"Book list and syllabus for SSC",
+      id:"6",
+      youtube_link:"https://www.youtube.com/embed/eqXFqA1Yg_0"
+  }]
 
     console.log('exam id ',typeof(examId))
     const exam=examsList.filter((ex)=>{

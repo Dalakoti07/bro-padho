@@ -2,32 +2,6 @@ import React from 'react';
 import {examSyllabusAndMore} from '../data/data'
 
 const Syllabus =({examName})=>{
-    
-    let videosList=[{
-        title:"Jimmy",
-        id:"1",
-        youtube_link:"https://www.youtube.com/embed?v=gJPclNjOwP8"
-    },{
-        title:"Jane",
-        id:"2",
-        youtube_link:"https://www.youtube.com/embed?v=gJPclNjOwP8"
-    },{
-        title:"Jonny",
-        id:"3",
-        youtube_link:"https://www.youtube.com/embed?v=gJPclNjOwP8"
-    },{
-        title:"Ab",
-        id:"4",
-        youtube_link:"https://www.youtube.com/embed?v=gJPclNjOwP8"
-    },{
-        title:"Anany",
-        id:"5",
-        youtube_link:"https://www.youtube.com/embed?v=gJPclNjOwP8"
-    },{
-        title:"Amit",
-        id:"6",
-        youtube_link:"https://www.youtube.com/embed?v=gJPclNjOwP8"
-    }]
 
     let examId=-1
     if(examName==='SSC'){
@@ -79,22 +53,6 @@ const Syllabus =({examName})=>{
                             })}
                         </div>
                 })}
-
-                <h3>Video News</h3>
-                <div className="all-videos-wrapper">
-                    {videosList
-                    ? videosList.map((video) => {
-                        return (
-                            <div className="a-video-news" key={video.id}>
-                            <iframe title={video.title} src={video.youtube_link} />
-                            <p>{video.title}</p>
-                            </div>
-                        );
-                        })
-                    : ""}
-                </div>
-
-                <div className="container grey-wrapper"></div>
             </div>
         </div>
     )

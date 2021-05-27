@@ -2,6 +2,32 @@ import React from 'react';
 import {examsList} from '../data/data'
 
 const Exam = ({examId}) => {
+  let videosList=[{
+    title:"Jimmy",
+    id:"1",
+    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
+},{
+    title:"Jane",
+    id:"2",
+    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
+},{
+    title:"Jonny",
+    id:"3",
+    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
+},{
+    title:"Ab",
+    id:"4",
+    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
+},{
+    title:"Anany",
+    id:"5",
+    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
+},{
+    title:"Amit",
+    id:"6",
+    youtube_link:"https://www.youtube.com/embed/gJPclNjOwP8"
+}]
+
     console.log('exam id ',typeof(examId))
     const exam=examsList.filter((ex)=>{
         return ex.id+''===examId
@@ -44,6 +70,23 @@ const Exam = ({examId}) => {
         <p className='center-text' style={{marginTop:"1rem",marginBottom:"2rem"}}>
             {description}
         </p>
+
+        <h3>Video Lectures</h3>
+                <div className="all-videos-wrapper">
+                    {videosList
+                    ? videosList.map((video) => {
+                        return (
+                            <div className="a-video-news" key={video.id}>
+                            <iframe title={video.title} src={video.youtube_link} />
+                            <p>{video.title}</p>
+                            </div>
+                        );
+                        })
+                    : ""}
+                </div>
+
+                <div className="container grey-wrapper"></div>
+
       </section>
     )
   }
